@@ -9,14 +9,28 @@
 			<p class="logo">Device</p>
 			<nav class="main-navigation">
 				<!-- Здесь будет форма поиска по сайту -->
-				<!-- <form><input type="search" name="search"></form> -->
+				<!-- <p><input type="search" name="search"></p> -->
 				<ul class="user-navigation">
 					<li class="sign-in"><a href="#">Войти</a></li>
 					<li class="comparison"><a href="#">Сравнить</a></li>
 					<li class="cart"><a href="#">Корзина</a></li>
 				</ul>
 				<ul class="site-navigation">
-					<li><a href="#">Каталог товаров</a></li>
+					<li>
+						<a class="dropdown-catalog" href="#">Каталог товаров</a>
+						<ul>
+							<li><a href="#">Виртуальная реальность</a></li>
+							<li><a href="catalog-monopods.html">Моноподы для селфи</a></li>
+							<li><a href="#">Экшн-камеры</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Фитнес-браслеты</a></li>
+							<li><a href="#">Умные часы</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Квадрокоптеры</a></li>
+						</ul>
+					</li>
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Гарантия</a></li>
 					<li><a href="#">Контакты</a></li>
@@ -26,7 +40,6 @@
 
 		<main class="container">
 			<h1 class="visually-hidden">Интернет-магазин гаджетов DEVICE</h1>
-			
 			<section class="promo-slider">
 				<h2 class="visually-hidden">Лучшие предложения</h2>
 				<!-- Здесь будет переключатель слайдов -->
@@ -67,7 +80,7 @@
 							<img src="http://placehold.it/345x485" alt="Черный фитнес-браслет">
 						</p>
 						<b></b>
-						<p class="description">
+						<p class="promo-slide-description">
 							<span>Худеем правильно!</span>
 							Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать	занятия и соблюдать диету.
 						</p>
@@ -87,7 +100,7 @@
 						<p class="promo-slide-image">
 							<img src="http://placehold.it/526x334" alt="Квадрокоптер с лазером">
 						</p>
-						<p class="description">
+						<p class="promo-slide-description">
 							<span>Порхает как бабочка, жалит как пчела!</span>
 							Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
 						</p>
@@ -106,9 +119,9 @@
 				</ol>
 			</section>
 
-			<section class="popular">
-				<h2 class="visually-hidden">Популярные категории</h2>
-				<ul class="popular-categories">
+			<section class="categories">
+				<h2 class="visually-hidden">Категории товаров</h2>
+				<ul class="categories-list">
 					<li><a href="#">Виртуальная реальность</a></li>
 					<li><a href="catalog-monopods.html">Моноподы для селфи</a></li>
 					<li><a href="#">Экшн-камеры</a></li>
@@ -179,9 +192,10 @@
 
 			<section class="about-us">
 				<h2>О нас</h2>
-				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 				<ul class="transport-companies">
-					<li>Деловые линии</li>
+					<li>Деловые Линии</li>  
 					<li>Автотрейдинг</li>
 					<li>ЖелДорЭкспедиция</li>
 				</ul>
@@ -200,43 +214,35 @@
 
 		<footer class="main-footer">
 			<p class="logo">Device</p>
-			<p class="address">г. Москва, ул. Строителей, 15</p>
-			<p class="phone">Тел.: +7 (495) 495-95-95</p>
+			<p class="footer-contacts">
+				<span class="address">г. Москва, ул. Строителей, 15</span><br>
+				<span class="phone">Тел.: +7 (495) 495-95-95</span>
+			</p>
 			<nav class="footer-navigation">
 				<ul class="user-navigation">
-					<li class="sign-in"><a href="#">Выйти</a></li>
+					<li class="sign-in"><a href="#">Войти</a></li>
 					<li class="comparison"><a href="#">Сравнить</a></li>
 					<li class="cart"><a href="#">Корзина</a></li>
 				</ul>
 				<ul class="site-navigation">
-					<li><a href="delivery.html">Доставка</a></li>
-					<li><a href="warranty.html">Гарантия</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Гарантия</a></li>
+					<li><a href="#">Контакты</a></li>
 				</ul>
 			</nav>
-			<ul class="footer-social">
-				<li><a class="social-button" href="#">Facebook</a></li>
-				<li><a class="social-button" href="#">Instagram</a></li>
-				<li><a class="social-button" href="#">Twitter</a></li>
-			</ul>
+			<div class="footer-social">
+				<ul>
+					<li><a class="social-button" href="#">Facebook</a></li>
+					<li><a class="social-button" href="#">Instagram</a></li>
+					<li><a class="social-button" href="#">Twitter</a></li>
+				</ul>
+			</div>
 			<a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
 		</footer>
 
-		<!-- Выпадающее меню каталога -->
-		<section class="catalog-menu">
-			<h2>Меню каталога</h2>
-			<ul class="catalog-column">
-				<li><a href="#">Виртуальная реальность</a></li>
-				<li><a href="catalog-monopods.html">Моноподы для селфи</a></li>
-				<li><a href="#">Экшн-камеры</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Фитнес-браслеты</a></li>
-				<li><a href="#">Умные часы</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Квадрокоптеры</a></li>
-			</ul>
+		<section class="modal modal-map">
+			<h2>Как до нас добраться</h2>
+			<!-- Здесь будет карта -->
 		</section>
 
 		<section class="modal modal-write-us">
@@ -263,11 +269,7 @@
 				</p>
 				<input class="button" type="submit" value="Отправить">
 			</form> -->
-			<span class="modal-close">x</span>
-		</section>
-
-		<section class="modal modal-map">
-			<h2>Как до нас добраться</h2>
+			<!-- <span class="modal-close">x</span> -->
 		</section>
   </body>
 </html>
