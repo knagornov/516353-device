@@ -7,36 +7,47 @@
   <body>
     <header class="main-header">
       <div class="wrapper">
-        <p class="logo">Device</p>
-        <nav class="main-navigation">
-          <!-- Здесь будет форма поиска по сайту -->
-          <!-- <p><input type="search" name="search"></p> -->
-          <ul class="user-navigation">
-            <li class="user-navigation-item sign-in"><a href="#">Войти</a></li>
-            <li class="user-navigation-item comparison"><a href="#">Сравнить</a></li>
-            <li class="user-navigation-item cart"><a href="#">Корзина</a></li>
-          </ul>
-          <ul class="site-navigation">
-            <li class="site-navigation-item">
-              <a class="dropdown-catalog" href="#">Каталог товаров</a>
-              <ul class="dropdown-catalog-column">
-                <li class="dropdown-catalog-item"><a href="#">Виртуальная реальность</a></li>
-                <li class="dropdown-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-                <li class="dropdown-catalog-item"><a href="#">Экшн-камеры</a></li>
-              </ul>
-              <ul class="dropdown-catalog-column">
-                <li class="dropdown-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-                <li class="dropdown-catalog-item"><a href="#">Умные часы</a></li>
-              </ul>
-              <ul class="dropdown-catalog-column">
-                <li class="dropdown-catalog-item"><a href="#">Квадрокоптеры</a></li>
-              </ul>
-            </li>
-            <li class="site-navigation-item"><a href="#">Доставка</a></li>
-            <li class="site-navigation-item"><a href="#">Гарантия</a></li>
-            <li class="site-navigation-item"><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
+        <div class="header-top-block">
+          <p class="logo">Device</p>
+        </div>
+        <div class="header-middle-block">
+          <form class="search" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+            <input id="search-field" name="search-field" type="search" placeholder="Поиск по сайту">
+            <button class="search-button" type="submit">Найти</button>
+          </form>
+          <nav class="user-navigation">
+            <ul>
+              <li class="user-navigation-item sign-in"><a href="#">Войти</a></li>
+              <li class="user-navigation-item comparison"><a href="#">Сравнить</a></li>
+              <li class="user-navigation-item cart"><a href="#">Корзина</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-bottom-block">
+          <nav class="site-navigation"> 
+            <ul>
+              <li class="site-navigation-item">
+                <a class="dropdown-catalog" href="#">Каталог товаров</a>
+                <ul class="dropdown-catalog-column">
+                  <li class="dropdown-catalog-item"><a href="#">Виртуальная реальность</a></li>
+                  <li class="dropdown-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+                  <li class="dropdown-catalog-item"><a href="#">Экшн-камеры</a></li>
+                </ul>
+                <ul class="dropdown-catalog-column">
+                  <li class="dropdown-catalog-item"><a href="#">Фитнес-браслеты</a></li>
+                  <li class="dropdown-catalog-item"><a href="#">Умные часы</a></li>
+                </ul>
+                <ul class="dropdown-catalog-column">
+                  <li class="dropdown-catalog-item"><a href="#">Квадрокоптеры</a></li>
+                </ul>
+              </li>
+              <li class="site-navigation-item"><a href="#">Доставка</a></li>
+              <li class="site-navigation-item"><a href="#">Гарантия</a></li>
+              <li class="site-navigation-item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -45,13 +56,20 @@
       <section class="promo-slider">
         <div class="container">
           <h2 class="visually-hidden">Лучшие предложения</h2>
-          <!-- Здесь будет переключатель слайдов -->
-          <!-- <div class="promo-slider-controls">
-            <label class="promo-slide-1"><input type="radio" name="toggle" checked></label>
-            <label class="promo-slide-2"><input type="radio" name="toggle"></label>
-            <label class="promo-slide-3"><input type="radio" name="toggle"></label>
-          </div> -->
-        
+          <div class="promo-slider-controls">
+            <p>
+              <input class="visually-hidden promo-toggle-1" id="promo-1" type="radio" name="promo-toggle" checked>
+              <label for="promo-1"><span class="visually-hidden">Предложение 1</span></label>
+            </p>
+            <p>
+              <input class="visually-hidden promo-toggle-2" id="promo-2" type="radio" name="promo-toggle">
+              <label for="promo-2"><span class="visually-hidden">Предложение 2</span></label>
+            </p>
+            <p>
+              <input class="visually-hidden promo-toggle-3" id="promo-3" type="radio" name="promo-toggle">
+              <label for="promo-3"><span class="visually-hidden">Предложение 3</span></label>  
+            </p>
+          </div>
           <ol class="promo-slides">
             <li class="promo-slides-item">
               <h3 class="visually-hidden">Монопод для селфи</h3>
@@ -82,7 +100,6 @@
               <div class="promo-slide-image">
                 <img src="img/slide-2.png" width="345" height="485" alt="Черный фитнес-браслет">
               </div>
-              <b></b>
               <div class="promo-slide-description">
                 <p class="promo-slogan">Худеем правильно!</p>
                 <p class="promo-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать  занятия и соблюдать диету.</p>
@@ -140,31 +157,30 @@
       <section class="services-slider">
         <div class="container">
           <h2 class="visually-hidden">Услуги</h2>
-          <!-- Здесь будет переключатель слайдов -->
-          <!-- <div class="services-slider-controls">
-            <label class="services-slide-1">
-              <input type="radio" name="toggle">
-              Доставка
-            </label>
-            <label class="services-slide-2">
-              <input type="radio" name="toggle">
-              Гарантия
-            </label>
-            <label class="services-slide-3">
-              <input type="radio" name="toggle" checked>
-              Кредит
-            </label>
-          </div> -->
+          <div class="services-slider-controls">
+            <p>
+              <input class="visually-hidden delivery-service-toggle" id="delivery" type="radio" name="services-toggle" checked>
+              <label class="button" for="delivery">Доставка</label>
+            </p>
+            <p>
+              <input class="visually-hidden warranty-service-toggle" id="warranty" type="radio" name="services-toggle">
+              <label class="button" for="warranty">Гарантия</label>
+            </p>
+            <p>
+              <input class="visually-hidden credit-service-toggle" id="credit" type="radio" name="services-toggle">
+              <label class="button" for="credit">Кредит</label>
+            </p>
+          </div>
           <ul class="services-slides">
-            <li class="services-slides-item">
+            <li class="services-slides-item delivery-service-slide">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="services-slides-item">
+            <li class="services-slides-item warranty-service-slide">
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
-            <li class="services-slides-item">
+            <li class="services-slides-item credit-service-slide">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
@@ -203,7 +219,7 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <p class="map">
-            <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Карта с месторасположением офиса: улица Строителей, дом 15"></a>
+            <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш офис по адресу улица Строителей 15, Москва"></a>
           </p>
           <a class="button" href="#">Напишите нам</a>
         </div>
@@ -213,8 +229,8 @@
     <footer class="main-footer">
       <div class="footer-top-block">
         <p class="logo">Device</p>
-        <nav class="top-block-navigation">
-          <ul class="user-navigation">
+        <nav class="user-navigation">
+          <ul>
             <li class="user-navigation-item sign-in"><a href="#">Войти</a></li>
             <li class="user-navigation-item comparison"><a href="#">Сравнить</a></li>
             <li class="user-navigation-item cart"><a href="#">Корзина</a></li>
@@ -223,8 +239,8 @@
       </div>
       <div class="footer-middle-block">
         <p class="address">г. Москва, ул. Строителей, 15</p>
-        <nav class="middle-block-navigation">
-          <ul class="site-navigation">
+        <nav class="site-navigation">
+          <ul>
             <li class="site-navigation-item"><a href="#">Доставка</a></li>
             <li class="site-navigation-item"><a href="#">Гарантия</a></li>
             <li class="site-navigation-item"><a href="#">Контакты</a></li>
@@ -245,36 +261,30 @@
     <section class="modal modal-map">
       <div class="container">
         <h2>Как до нас добраться</h2>
-        <!-- Здесь будет карта -->
+<!-- Здесь будет карта -->
+        <button class="modal-close" type="button">Закрыть карту</button>
       </div>
     </section>
 
-    <section class="modal modal-write-us">
+    <section class="modal modal-feedback">
       <div class="container">
         <h2 class="visually-hidden">Напишите нам</h2>
-        <!-- Здесь будет форма для отправки сообщения -->
-        <!-- <form class="message-form">
-          <p class="message-form-item">
-            <label>
-              Ваше имя:
-              <input type="text" name="name">
-            </label>
+        <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+          <p class="feedback-item">
+            <label for="feedback-name">Ваше имя:</label>
+            <input id="feedback-name" name="name" type="text" placeholder="Представьтесь, пожалуйста">
           </p>
-          <p class="message-form-item">
-            <label>
-              Ваш e-mail:
-              <input type="email" name="email">
-            </label>
+          <p class="feedback-item">
+            <label for="feedback-email">Ваш e-mail:</label>
+            <input id="feedback-email" name="email" type="email" placeholder="Для отправки ответа">
           </p>
-          <p class="message-form-item">
-            <label>
-              Текст письма:
-              <textarea name="message"></textarea>
-            </label>
+          <p class="feedback-item">
+            <label for="feedback-message">Текст письма:</label>
+            <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
           </p>
-          <input class="button" type="submit" value="Отправить">
-        </form> -->
-        <!-- <span class="modal-close">x</span> -->
+          <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
       </div>
     </section>
   </body>
