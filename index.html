@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="wrapper">
         <div class="header-top-block">
-          <p class="logo">Device</p>
+          <div class="logo-header">
+            <img src="img/device-logo-header.png" width="163" height="36" alt="Логотип DEVICE">
+          </div>
         </div>
         <div class="header-middle-block">
           <form class="search" action="https://echo.htmlacademy.ru" method="post">
@@ -30,16 +35,16 @@
               <li class="site-navigation-item">
                 <a class="dropdown-catalog" href="#">Каталог товаров</a>
                 <ul class="dropdown-catalog-column">
-                  <li class="dropdown-catalog-item"><a href="#">Виртуальная реальность</a></li>
-                  <li class="dropdown-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-                  <li class="dropdown-catalog-item"><a href="#">Экшн-камеры</a></li>
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="catalog.html">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
                 </ul>
                 <ul class="dropdown-catalog-column">
-                  <li class="dropdown-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-                  <li class="dropdown-catalog-item"><a href="#">Умные часы</a></li>
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
                 </ul>
                 <ul class="dropdown-catalog-column">
-                  <li class="dropdown-catalog-item"><a href="#">Квадрокоптеры</a></li>
+                  <li><a href="#">Квадрокоптеры</a></li>
                 </ul>
               </li>
               <li class="site-navigation-item"><a href="#">Доставка</a></li>
@@ -58,15 +63,15 @@
           <h2 class="visually-hidden">Лучшие предложения</h2>
           <div class="promo-slider-controls">
             <p>
-              <input class="visually-hidden promo-toggle-1" id="promo-1" type="radio" name="promo-toggle" checked>
+              <input class="visually-hidden" id="promo-1" type="radio" name="promo-toggle" checked>
               <label for="promo-1"><span class="visually-hidden">Предложение 1</span></label>
             </p>
             <p>
-              <input class="visually-hidden promo-toggle-2" id="promo-2" type="radio" name="promo-toggle">
+              <input class="visually-hidden" id="promo-2" type="radio" name="promo-toggle">
               <label for="promo-2"><span class="visually-hidden">Предложение 2</span></label>
             </p>
             <p>
-              <input class="visually-hidden promo-toggle-3" id="promo-3" type="radio" name="promo-toggle">
+              <input class="visually-hidden" id="promo-3" type="radio" name="promo-toggle">
               <label for="promo-3"><span class="visually-hidden">Предложение 3</span></label>  
             </p>
           </div>
@@ -77,18 +82,18 @@
                 <img src="img/slide-1.png" width="384" height="486" alt="Карбоновый монопод для селфи">
               </div>
               <div class="promo-slide-description">
-                <p class="promo-slogan">Делай селфи, как Бен Стиллер!</p>
+                <p class="promo-slogan">Делай селфи,<br> как Бен Стиллер!</p>
                 <p class="promo-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <table>
-                  <tr>
-                    <th>Длина палки</th>
-                    <th>Вес палки</th>
-                    <th>Материал</th>
-                  </tr>
+                <table>                  
                   <tr>
                     <td>8,5 м</td>
                     <td>5 кг</td>
                     <td>Карбон</td>
+                  </tr>
+                  <tr>
+                    <th>Длина палки</th>
+                    <th>Вес палки</th>
+                    <th>Материал</th>
                   </tr>
                 </table>
                 <a class="button" href="#">Подробнее</a>
@@ -101,14 +106,14 @@
                 <img src="img/slide-2.png" width="345" height="485" alt="Черный фитнес-браслет">
               </div>
               <div class="promo-slide-description">
-                <p class="promo-slogan">Худеем правильно!</p>
+                <p class="promo-slogan">Худеем<br> правильно!</p>
                 <p class="promo-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать  занятия и соблюдать диету.</p>
                 <table>
                   <tr>
-                    <th>Без подзарядки</th>
+                    <td>48 часов</td>
                   </tr>
                   <tr>
-                    <td>48 часов</td>
+                    <th>Без подзарядки</th>
                   </tr>
                 </table>
                 <a class="button" href="#">Подробнее</a>
@@ -121,16 +126,16 @@
                 <img src="img/slide-3.png" width="526" height="334" alt="Квадрокоптер с лазером">
               </div>
               <div class="promo-slide-description">
-                <p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
+                <p class="promo-slogan">Порхает как бабочка,<br> жалит как пчела!</p>
                 <p class="promo-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                 <table>
                   <tr>
-                    <th>Дальность полета</th>
-                    <th>Радиус поражения</th>
-                  </tr>
-                  <tr>
                     <td>800 м</td>
                     <td>50 м</td>
+                  </tr>
+                  <tr>
+                    <th>Дальность полета</th>
+                    <th>Радиус поражения</th>
                   </tr>
                 </table>
                 <a class="button" href="#">Подробнее</a>
@@ -188,14 +193,22 @@
         </div>
       </section>
 
-      <section class="partners">
+      <section class="companies">
         <div class="container">
-          <h2 class="visually-hidden">Наши партнеры</h2>
-          <ul class="list-of-partners">
-            <li><a href="https://www.dji.com">DJI</a></li>
-            <li><a href="http://www.sp-gadgets.com">SP Gadgets</a></li>
-            <li><a href="https://gopro.com">GoPro</a></li>
-            <li><a href="https://www.vive.com/ru">HTC VIVE</a></li>
+          <h2 class="visually-hidden">Бренды</h2>
+          <ul class="list-of-companies">
+            <li class="company">
+              <a href="https://www.dji.com"><span class="visually-hidden">DJI</span></a>
+            </li>
+            <li class="company">
+              <a href="http://www.sp-gadgets.com"><span class="visually-hidden">SP Gadgets</span></a>
+            </li>
+            <li class="company">
+              <a href="https://gopro.com"><span class="visually-hidden">GoPro</span></a>
+            </li>
+            <li class="company">
+              <a href="https://www.vive.com/ru"><span class="visually-hidden">HTC VIVE</span></a>
+            </li>
           </ul>
         </div>
       </section>
@@ -228,7 +241,9 @@
 
     <footer class="main-footer">
       <div class="footer-top-block">
-        <p class="logo">Device</p>
+        <div class="logo-footer">
+          <img src="img/device-logo-footer.png" width="163" height="36" alt="Логотип DEVICE">
+        </div>
         <nav class="user-navigation">
           <ul>
             <li class="user-navigation-item sign-in"><a href="#">Войти</a></li>

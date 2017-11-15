@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="wrapper">
         <div class="header-top-block">
-          <p class="logo"><a href="index.html">Device</a></p>
+          <div class="logo-header">
+            <a href="index.html"><img src="img/device-logo-header.png" width="163" height="36" alt="Логотип DEVICE"></a>
+          </div>
         </div>
         <div class="header-middle-block">
           <form class="search" action="https://echo.htmlacademy.ru" method="post">
@@ -19,7 +24,7 @@
           <nav class="user-navigation">
             <ul>
               <li class="user-navigation-item profile"><a href="#">Валентин Петухов</a></li>
-              <li class="user-navigation-item sign-in"><a href="#">Выйти</a></li>
+              <li class="user-navigation-item sign-out"><a href="#">Выйти</a></li>
               <li class="user-navigation-item comparison"><a href="#">Сравнить</a></li>
               <li class="user-navigation-item cart"><a href="#">Корзина</a></li>
             </ul>
@@ -31,16 +36,16 @@
               <li class="site-navigation-item">
                 <a class="dropdown-catalog" href="#">Каталог товаров</a>
                 <ul class="dropdown-catalog-column">
-                  <li class="dropdown-catalog-item"><a href="#">Виртуальная реальность</a></li>
-                  <li class="dropdown-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-                  <li class="dropdown-catalog-item"><a href="#">Экшн-камеры</a></li>
+                  <li><a href="#">Виртуальная реальность</a></li>
+                  <li><a href="catalog.html">Моноподы для селфи</a></li>
+                  <li><a href="#">Экшн-камеры</a></li>
                 </ul>
                 <ul class="dropdown-catalog-column">
-                  <li class="dropdown-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-                  <li class="dropdown-catalog-item"><a href="#">Умные часы</a></li>
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Умные часы</a></li>
                 </ul>
                 <ul class="dropdown-catalog-column">
-                  <li class="dropdown-catalog-item"><a href="#">Квадрокоптеры</a></li>
+                  <li><a href="#">Квадрокоптеры</a></li>
                 </ul>
               </li>
               <li class="site-navigation-item"><a href="#">Доставка</a></li>
@@ -52,7 +57,7 @@
       </div>
     </header>
 
-    <main class="main-content">
+    <main class="catalog-content">
       <h1>Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
@@ -121,7 +126,7 @@
         <div class="container">
           <h2>Сортировка:</h2>
           <ul class="sorting-by">
-            <li><a href="#">По цене</a></li>
+            <li class="current-sort"><a href="#">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По популярности</a></li>
           </ul>
@@ -186,7 +191,7 @@
             </li>
           </ul>
 
-          <ul class="pagination-list" aria-label="Навигация по страницам">
+          <ul class="pagination" aria-label="Навигация по страницам">
             <li class="pagination-item previous-page"><a href="#" aria-label="Предыдущая страница">Назад</a></li>
             <li class="pagination-item pagination-item-current"><a href="#" aria-label="Страница 1">1</a></li>
             <li class="pagination-item"><a href="#" aria-label="Страница 2">2</a></li>
@@ -199,7 +204,9 @@
 
     <footer class="main-footer">
       <div class="footer-top-block">
-        <p class="logo"><a href="index.html">Device</a></p>
+        <div class="logo-footer">
+          <a href="index.html"><img src="img/device-logo-footer.png" width="163" height="36" alt="Логотип DEVICE"></a>
+        </div>
         <nav class="user-navigation">
           <ul>
             <li class="user-navigation-item sign-in"><a href="#">Войти</a></li>
