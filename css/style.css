@@ -21,7 +21,6 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
-
   letter-spacing: 0.01em;
 
   color: #464646;
@@ -32,24 +31,25 @@ a {
 }
 
 .button {
-  cursor: pointer;
   display: inline-block;
-  padding: 0;
 
   width: 260px;
   height: 40px;
+  padding: 0;
 
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 40px;
+  letter-spacing: 0.2em;
 
+  cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
 
   color: #000;
   border: none;
+  outline: none;
   background: linear-gradient(transparent 16px, #f4d361 16px, #f4d361 17px, #f0c52e 17px, #f0c52e 23px, #f4d361 23px, #f4d361 24px, transparent 24px);
 }
 
@@ -59,12 +59,11 @@ a {
 }
 
 .button:active {
-  color: #f7e184;
-  background: #000;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-header .wrapper {
-  background: linear-gradient(white 40px, #f8e49f 40px, #f8e49f 41px, #f7e296 41px);
+  background: linear-gradient(#fff 40px, #f8e49f 40px, #f8e49f 41px, #f7e296 41px);
 }
 
 .logo-header a:hover,
@@ -78,20 +77,57 @@ a {
 }
 
 .search input {
+  padding: 0;
+
   font: inherit;
   line-height: 36px;
+  letter-spacing: 0.01em;
 
   border: none;
+  outline: none;
   background-color: transparent;
+}
+
+.search input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.search input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.search input:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.search input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input:hover::-webkit-input-placeholder,
+.search input:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.search input:hover::-moz-placeholder:hover,
+.search input:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.search input:hover:-moz-placeholder:hover,
+.search input:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.search input:hover:-ms-input-placeholder,
+.search input:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .search-button {
   font: inherit;
-  line-height: 49px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
 
+  cursor: pointer;
   text-align: center;
 
   border: 2px solid black;
+  outline: none;
   background-color: transparent;
 }
 
@@ -139,8 +175,8 @@ a {
 .site-navigation-item > a {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 18px;
-
   letter-spacing: 0.2em;
+
   text-transform: uppercase;
 }
 
@@ -162,7 +198,7 @@ a {
   content: "0" counter(slideCounter);
   counter-increment: slideCounter;
 
-  color: #000;
+  color: #000; /*Заменить на белый цвет*/
 }
 
 .promo-slogan {
@@ -170,6 +206,10 @@ a {
   font-size: 47px;
 
   color: #000;
+}
+
+.promo-text {
+  line-height: 30px;
 }
 
 .promo-slide-description table {
@@ -181,6 +221,7 @@ a {
   padding: 0;
 
   font-size: 13px;
+  font-weight: 300;
   line-height: 20px;
 }
 
@@ -224,6 +265,12 @@ a {
   width: 160px;
 }
 
+.delivery-service-toggle:active + label,
+.warranty-service-toggle:active + label,
+.credit-service-toggle:active + label {
+  color: #000;
+}
+
 .delivery-service-toggle:checked + label,
 .warranty-service-toggle:checked + label,
 .credit-service-toggle:checked + label {
@@ -240,6 +287,10 @@ a {
   font-size: 47px;
 
   color: #000;
+}
+
+.services-slides-item p {
+  line-height: 30px;
 }
 
 .list-of-companies {
@@ -288,6 +339,7 @@ a {
 
 .about-us p,
 .contacts p {
+  line-height: 30px;
   letter-spacing: 0;
 }
 
@@ -295,10 +347,9 @@ a {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 40px;
+  letter-spacing: 0;
 
   list-style: none;
-
-  letter-spacing: 0;
 
   color: #000;
 }
@@ -308,14 +359,20 @@ a {
 }
 
 .main-footer .user-navigation a,
-.main-footer .site-navigation a,
 .social-button,
 .footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-footer .site-navigation a {
   color: #fff;
 }
 
 .main-footer .user-navigation a:hover,
-.main-footer .user-navigation a:focus,
+.main-footer .user-navigation a:focus {
+  color: #fff;
+}
+
 .main-footer .site-navigation a:hover,
 .main-footer .site-navigation a:focus {
   color: rgba(255, 255, 255, 0.6);
@@ -328,6 +385,7 @@ a {
 
 .address,
 .phone {
+  line-height: 30px;
   letter-spacing: 0;
 
   color: #fff;
@@ -337,11 +395,11 @@ a {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
-
   letter-spacing: 0;
 
   color: #000;
 }
+
 
 .feedback-item input,
 .feedback-item textarea {
@@ -349,10 +407,10 @@ a {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-
   letter-spacing: 0;
 
   border: none;
+  outline: none;
   background-color: #f2f2f2;
 }
 
@@ -361,17 +419,69 @@ a {
   height: 50px;
 }
 
+.feedback-item input:hover,
+.feedback-item textarea:hover {
+  background-color: #eaeaea;
+}
+
+.feedback-item input:focus,
+.feedback-item textarea:focus {
+  border: 3px solid #f7e296;
+  background-color: #fff;
+}
+
+.feedback-item input:invalid,
+.feedback-item textarea:invalid {
+  border: none;
+  background-color: #f6dada;
+}
+
 .feedback-item textarea {
   width: 760px;
   height: 156px;
+
   resize: none;
+}
+
+.feedback input::-webkit-input-placeholder,
+.feedback textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.feedback input::-moz-placeholder,
+.feedback textarea::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.feedback input:-moz-placeholder,
+.feedback textarea:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.feedback input:-ms-input-placeholder,
+.feedback textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.feedback input:hover::-webkit-input-placeholder,
+.feedback textarea:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.feedback input:hover::-moz-placeholder,
+.feedback textarea:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.feedback input:hover:hover:-moz-placeholder,
+.feedback textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.feedback input:hover:-ms-input-placeholder,
+.feedback textarea:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .feedback .button {
   width: 200px;
 }
 
-/*--------------------catalog.html--------------------*/
+/*------------------------------catalog.html------------------------------*/
 
 .catalog-content {
   color: #000;
@@ -387,12 +497,15 @@ h1 {
 }
 
 .breadcrumbs {
-  list-style: none;
   font-size: 14px;
+
+  list-style: none;
 }
 
 .breadcrumbs li,
 .breadcrumbs a {
+  line-height: 36px;
+
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -410,6 +523,7 @@ h1 {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 16px;
   letter-spacing: 0.2em;
+
   text-transform: uppercase;
 }
 
@@ -428,7 +542,7 @@ h1 {
 
 .filter-form legend {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 .price-range label,
@@ -437,6 +551,7 @@ h1 {
   font-size: 14px;
   line-height: 22.27px;
   letter-spacing: 0;
+
   color: rgba(0, 0, 0, 0.2);
 }
 
@@ -452,6 +567,11 @@ h1 {
   line-height: 40px;
 }
 
+.color-filter input:disabled + label,
+.bluetooth-filter input:disabled + label {
+  color: #a6a6a6;
+}
+
 .sorting .container {
   background-color: rgba(0, 0, 0, 0.08);
 }
@@ -461,10 +581,11 @@ h1 {
 }
 
 .sorting-by a {
+  font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  font-size: 14px;
   letter-spacing: 0;
+
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -485,24 +606,29 @@ h1 {
 .catalog-item h3 a {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 18px;
+
   color: #000;
 }
 
 .catalog-item-price {
-  font-style: 16px;
+  font-size: 16px;
 }
 
 .catalog-item-actions {
   cursor: pointer;
+
   background-color: rgba(238, 238, 238, 0.7);
 }
 
 .add-to-comparison {
-  cursor: pointer;
   font-size: 13px;
+  line-height: 36px;
+
+  cursor: pointer;
+
   color: rgba(0, 0, 0, 0.5);
-  background-color: transparent;
   border: 0;
+  background-color: transparent;
 }
 
 .add-to-comparison:hover,
@@ -516,6 +642,7 @@ h1 {
 
 .pagination {
   list-style: none;
+
   background-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -523,8 +650,10 @@ h1 {
   font-family: "Gilroy ExtraBold", "Arial", sans-serif;
   font-size: 16px;
   letter-spacing: 0.3em;
-  color: rgba(0, 0, 0, 0.3);
+
   text-transform: uppercase;
+
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination-item a:hover,
@@ -553,3 +682,14 @@ h1 {
 .next-page a:active {
   color: rgba(0, 0, 0, 0.3);
 }
+
+/*.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/
