@@ -1,17 +1,19 @@
 @font-face {
-  font-family: "Gilroy ExtraBold";
-  font-weight: normal;
+  font-family: "Gilroy";
+  font-weight: 800;
   font-style: normal;
 
-  src: url("/fonts/gilroyextrabold-webfont.woff2") format("woff2");
+  src: url("../fonts/gilroyextrabold-webfont.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold-webfont.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gilroy Light";
-  font-weight: normal;
+  font-family: "Gilroy";
+  font-weight: 300;
   font-style: normal;
 
-  src: url("/fonts/gilroylight-webfont.woff2") format("woff2");
+  src: url("../fonts/gilroylight-webfont.woff2") format("woff2"),
+  url("../fonts/gilroylight-webfont.woff") format("woff");
 }
 
 body {
@@ -37,8 +39,9 @@ a {
   height: 40px;
   padding: 0;
 
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 40px;
   letter-spacing: 0.2em;
 
@@ -173,8 +176,9 @@ a {
 }
 
 .site-navigation-item > a {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   letter-spacing: 0.2em;
 
   text-transform: uppercase;
@@ -191,8 +195,9 @@ a {
 }
 
 .promo-slides-item::before {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 179.2px;
+  font-weight: 800;
   line-height: 179.2px;
 
   content: "0" counter(slideCounter);
@@ -202,8 +207,9 @@ a {
 }
 
 .promo-slogan {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
+  font-weight: 800;
 
   color: #000;
 }
@@ -232,8 +238,9 @@ a {
 .promo-slide-description td {
   padding: 0;
 
-  font-family: "Gilroy Light", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
+  font-weight: 300;
 
   color: #000;
 }
@@ -247,8 +254,9 @@ a {
 }
 
 .categories-list a {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: 800;
 
   color: #000;
 }
@@ -283,8 +291,9 @@ a {
 }
 
 .services-slides h3 {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
+  font-weight: 800;
 
   color: #000;
 }
@@ -331,8 +340,9 @@ a {
 
 .about-us h2,
 .contacts h2 {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
+  font-weight: 800;
 
   color: #000;
 }
@@ -344,8 +354,9 @@ a {
 }
 
 .transport-companies {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 800;
   line-height: 40px;
   letter-spacing: 0;
 
@@ -392,8 +403,9 @@ a {
 }
 
 .feedback-item label {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 18px;
   letter-spacing: 0;
 
@@ -410,7 +422,6 @@ a {
   letter-spacing: 0;
 
   border: none;
-  outline: none;
   background-color: #f2f2f2;
 }
 
@@ -426,7 +437,7 @@ a {
 
 .feedback-item input:focus,
 .feedback-item textarea:focus {
-  border: 3px solid #f7e296;
+  outline: 3px solid #f7e296;
   background-color: #fff;
 }
 
@@ -492,8 +503,9 @@ a {
 }
 
 h1 {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
+  font-weight: 800;
 }
 
 .breadcrumbs {
@@ -520,8 +532,9 @@ h1 {
 
 .filter h2,
 .sorting h2 {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 800;
   letter-spacing: 0.2em;
 
   text-transform: uppercase;
@@ -541,14 +554,16 @@ h1 {
 }
 
 .filter-form legend {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: 800;
 }
 
 .price-range label,
 .price-range input {
-  font-family: "Gilroy Light", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 14px;
+  font-weight: 300;
   line-height: 22.27px;
   letter-spacing: 0;
 
@@ -562,8 +577,8 @@ h1 {
 
 .color-filter label,
 .bluetooth-filter label {
-  font-family: "Gilroy Light", "Arial", sans-serif;
   font-size: 14px;
+  font-weight: 300;
   line-height: 40px;
 }
 
@@ -604,8 +619,9 @@ h1 {
 }
 
 .catalog-item h3 a {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: 800;
 
   color: #000;
 }
@@ -647,8 +663,9 @@ h1 {
 }
 
 .pagination-item a {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 800;
   letter-spacing: 0.3em;
 
   text-transform: uppercase;
