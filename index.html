@@ -33,19 +33,21 @@
           <nav class="site-navigation"> 
             <ul>
               <li class="site-navigation-item">
-                <a class="dropdown-catalog" href="#">Каталог товаров</a>
-                <ul class="dropdown-catalog-column">
-                  <li><a href="#">Виртуальная реальность</a></li>
-                  <li><a href="catalog.html">Моноподы для селфи</a></li>
-                  <li><a href="#">Экшн-камеры</a></li>
-                </ul>
-                <ul class="dropdown-catalog-column">
-                  <li><a href="#">Фитнес-браслеты</a></li>
-                  <li><a href="#">Умные часы</a></li>
-                </ul>
-                <ul class="dropdown-catalog-column">
-                  <li><a href="#">Квадрокоптеры</a></li>
-                </ul>
+                <a class="catalog-button" href="#">Каталог товаров</a>
+                <div class="dropdown-catalog">
+                  <ul class="dropdown-catalog-column">
+                    <li><a href="#">Виртуальная реальность</a></li>
+                    <li><a href="catalog.html">Моноподы для селфи</a></li>
+                    <li><a href="#">Экшн-камеры</a></li>
+                  </ul>
+                  <ul class="dropdown-catalog-column">
+                    <li><a href="#">Фитнес-браслеты</a></li>
+                    <li><a href="#">Умные часы</a></li>
+                  </ul>
+                  <ul class="dropdown-catalog-column">
+                    <li><a href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </div>
               </li>
               <li class="site-navigation-item"><a href="#">Доставка</a></li>
               <li class="site-navigation-item"><a href="#">Гарантия</a></li>
@@ -83,7 +85,7 @@
               </div>
               <div class="promo-slide-description">
                 <p class="promo-slogan">Делай селфи,<br> как Бен Стиллер!</p>
-                <p class="promo-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <p class="promo-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь&nbsp;(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <table>                  
                   <tr>
                     <td>8,5 м</td>
@@ -150,7 +152,7 @@
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="categories-list">
             <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
+            <li><a href="catalog.html">Моноподы для&nbsp;селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
             <li><a href="#">Умные часы</a></li>
@@ -176,20 +178,22 @@
               <label class="button" for="credit">Кредит</label>
             </p>
           </div>
-          <ul class="services-slides">
-            <li class="services-slides-item delivery-service-slide">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </li>
-            <li class="services-slides-item warranty-service-slide">
-              <h3>Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-            </li>
-            <li class="services-slides-item credit-service-slide">
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-            </li>
-          </ul>
+          <div class="services-slides-wrapper">
+            <ul class="services-slides">
+              <li class="services-slides-item delivery-service-slide">
+                <h3>Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </li>
+              <li class="services-slides-item warranty-service-slide">
+                <h3>Гарантия</h3>
+                <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар,&nbsp;не&nbsp;дом, конечно же.</p>
+              </li>
+              <li class="services-slides-item credit-service-slide">
+                <h3>Кредит</h3>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия&nbsp;кредита. Выгодные для нашего банка, разумеется.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -212,64 +216,66 @@
           </ul>
         </div>
       </section>
-
-      <section class="about-us">
-        <div class="container">
+      
+      <div class="container about-us-container">
+        <section class="about-us">         
           <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul class="transport-companies">
-            <li>Деловые Линии</li>  
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
-          </ul>
-          <a class="button" href="#">Подробнее о нас</a>
-        </div>
-      </section>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который&nbsp;есть&nbsp;в&nbsp;каждом из нас.</p>
+          <div class="transport-companies-wrapper">
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России!&nbsp;DEVICE&nbsp;работает со многими транспортными компаниями:</p>
+            <ul class="transport-companies">
+              <li>Деловые Линии</li>  
+              <li>Автотрейдинг</li>
+              <li>ЖелДорЭкспедиция</li>
+            </ul>
+          </div>
+          <a class="button" href="#">Подробнее о нас</a>          
+        </section>
 
-      <section class="contacts">
-        <div class="container">
+        <section class="contacts">          
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <p class="map">
             <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш офис по адресу улица Строителей 15, Москва"></a>
           </p>
-          <a class="button" href="#">Напишите нам</a>
-        </div>
-      </section>
+          <a class="button" href="#">Напишите нам</a>          
+        </section>
+      </div>
     </main>
 
     <footer class="main-footer">
-      <div class="footer-top-block">
-        <div class="logo-footer">
-          <img src="img/device-logo-footer.png" width="163" height="36" alt="Логотип DEVICE">
+      <div class="wrapper">
+        <div class="footer-top-block">
+          <div class="logo-footer">
+            <img src="img/device-logo-footer.png" width="163" height="36" alt="Логотип DEVICE">
+          </div>
+          <nav class="user-navigation">
+            <ul>
+              <li class="user-navigation-item sign-in"><a href="#">Войти</a></li>
+              <li class="user-navigation-item comparison"><a href="#">Сравнить</a></li>
+              <li class="user-navigation-item cart"><a href="#">Корзина</a></li>
+            </ul>          
+          </nav>
         </div>
-        <nav class="user-navigation">
-          <ul>
-            <li class="user-navigation-item sign-in"><a href="#">Войти</a></li>
-            <li class="user-navigation-item comparison"><a href="#">Сравнить</a></li>
-            <li class="user-navigation-item cart"><a href="#">Корзина</a></li>
-          </ul>          
-        </nav>
-      </div>
-      <div class="footer-middle-block">
-        <p class="address">г. Москва, ул. Строителей, 15</p>
-        <nav class="site-navigation">
-          <ul>
-            <li class="site-navigation-item"><a href="#">Доставка</a></li>
-            <li class="site-navigation-item"><a href="#">Гарантия</a></li>
+        <div class="footer-middle-block">
+          <p class="address">г. Москва, ул. Строителей, 15</p>
+          <nav class="site-navigation">
+            <ul>
+              <li class="site-navigation-item"><a href="#">Доставка</a></li>
+              <li class="site-navigation-item"><a href="#">Гарантия</a></li>
             <li class="site-navigation-item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <p class="phone">Тел.: +7 (495) 495-95-95</p>
+        </div>
+        <div class="footer-bottom-block">
+          <ul class="footer-social">
+            <li><a class="social-button" href="#">Facebook</a></li>
+            <li><a class="social-button" href="#">Instagram</a></li>
+            <li><a class="social-button" href="#">Twitter</a></li>
           </ul>
-        </nav>
-        <p class="phone">Тел.: +7 (495) 495-95-95</p>
-      </div>
-      <div class="footer-bottom-block">
-        <ul class="footer-social">
-          <li><a class="social-button" href="#">Facebook</a></li>
-          <li><a class="social-button" href="#">Instagram</a></li>
-          <li><a class="social-button" href="#">Twitter</a></li>
-        </ul>
-        <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        </div>
       </div>
     </footer>
 
