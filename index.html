@@ -19,7 +19,7 @@
           <form class="search" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <input id="search-field" name="search-field" type="search" placeholder="Поиск по сайту">
-            <button class="search-button" type="submit">Найти</button>
+            <button class="search-button" type="submit" tabindex="-1">Найти</button>
           </form>
           <nav class="user-navigation">
             <ul>
@@ -33,7 +33,7 @@
           <nav class="site-navigation"> 
             <ul>
               <li class="site-navigation-item">
-                <a class="catalog-button" href="#">Каталог товаров</a>
+                <a class="catalog-button" href="#catalog-category">Каталог товаров</a>
                 <div class="dropdown-catalog">
                   <ul class="dropdown-catalog-column">
                     <li><a href="#">Виртуальная реальность</a></li>
@@ -64,18 +64,9 @@
         <div class="container">
           <h2 class="visually-hidden">Лучшие предложения</h2>
           <div class="promo-slider-controls">
-            <p>
-              <input class="visually-hidden" id="promo-1" type="radio" name="promo-toggle" checked>
-              <label for="promo-1"><span class="visually-hidden">Предложение 1</span></label>
-            </p>
-            <p>
-              <input class="visually-hidden" id="promo-2" type="radio" name="promo-toggle">
-              <label for="promo-2"><span class="visually-hidden">Предложение 2</span></label>
-            </p>
-            <p>
-              <input class="visually-hidden" id="promo-3" type="radio" name="promo-toggle">
-              <label for="promo-3"><span class="visually-hidden">Предложение 3</span></label>  
-            </p>
+            <button class="promo-button current-promo" type="button"><span class="visually-hidden">Предложение 1</span></button>
+            <button class="promo-button" type="button"><span class="visually-hidden">Предложение 2</span></button>
+            <button class="promo-button" type="button"><span class="visually-hidden">Предложение 3</span></button>
           </div>
           <ol class="promo-slides">
             <li class="promo-slides-item">
@@ -151,7 +142,7 @@
         <div class="container">
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="categories-list">
-            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a name="catalog-category" href="#">Виртуальная реальность</a></li>
             <li><a href="catalog.html">Моноподы для&nbsp;селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
             <li><a href="#">Фитнес-браслеты</a></li>
@@ -165,18 +156,9 @@
         <div class="container">
           <h2 class="visually-hidden">Услуги</h2>
           <div class="services-slider-controls">
-            <p>
-              <input class="visually-hidden delivery-service-toggle" id="delivery" type="radio" name="services-toggle" checked>
-              <label class="button" for="delivery">Доставка</label>
-            </p>
-            <p>
-              <input class="visually-hidden warranty-service-toggle" id="warranty" type="radio" name="services-toggle">
-              <label class="button" for="warranty">Гарантия</label>
-            </p>
-            <p>
-              <input class="visually-hidden credit-service-toggle" id="credit" type="radio" name="services-toggle">
-              <label class="button" for="credit">Кредит</label>
-            </p>
+            <button class="button current-service" type="button">Доставка</button>
+            <button class="button" type="button">Гарантия</button>
+            <button class="button" type="button">Кредит</button>
           </div>
           <ul class="services-slides">
             <li class="services-slides-item delivery-service-slide">
@@ -219,23 +201,21 @@
         <section class="about-us">         
           <h2>О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который&nbsp;есть&nbsp;в&nbsp;каждом из нас.</p>
-          <div class="transport-companies-wrapper">
-            <p>Мы можем доставить ваш товар в самые отдаленные точки России!&nbsp;DEVICE&nbsp;работает со многими транспортными компаниями:</p>
-            <ul class="transport-companies">
-              <li>Деловые Линии</li>  
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
-            </ul>
-          </div>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!&nbsp;DEVICE&nbsp;работает со многими транспортными компаниями:</p>
+          <ul class="transport-companies">
+            <li>Деловые Линии</li>  
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
           <a class="button" href="#">Подробнее о нас</a>          
         </section>
 
         <section class="contacts">          
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <p class="map">
+          <div class="map">
             <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш офис по адресу улица Строителей 15, Москва"></a>
-          </p>
+          </div>
           <a class="button" href="#">Напишите нам</a>          
         </section>
       </div>
@@ -268,25 +248,31 @@
         </div>
         <div class="footer-bottom-block">
           <ul class="footer-social">
-            <li><a class="social-button" href="#">Facebook</a></li>
-            <li><a class="social-button" href="#">Instagram</a></li>
-            <li><a class="social-button" href="#">Twitter</a></li>
+            <li>
+              <a class="social-button" href="#"><img src="img/social-facebook.svg" width="32" height="32" alt="Facebook"></a>
+            </li>
+            <li>
+              <a class="social-button" href="#"><img src="img/social-instagram.svg" width="32" height="32" alt="Instagram"></a>
+            </li>
+            <li>
+              <a class="social-button" href="#"><img src="img/social-twitter.svg" width="32" height="32" alt="Twitter"></a>
+            </li>
           </ul>
-          <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="35" alt="HTML Academy"></a>
         </div>
       </div>
     </footer>
 
     <section class="modal modal-map">
-      <div class="container">
-        <h2>Как до нас добраться</h2>
-<!-- Здесь будет карта -->
-        <button class="modal-close" type="button">Закрыть карту</button>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <div class="big-map">
+        <img src="img/map-big.jpg" width="960" height="559" alt="Наш офис по адресу улица Строителей 15, Москва">
       </div>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть карту</span></button>
     </section>
 
-    <section class="modal modal-feedback">
-      <div class="container">
+    <div class="modal-feedback-wrapper">
+      <section class="modal modal-feedback">     
         <h2 class="visually-hidden">Напишите нам</h2>
         <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
           <p class="feedback-item">
@@ -303,8 +289,8 @@
           </p>
           <button class="button" type="submit">Отправить</button>
         </form>
-        <button class="modal-close" type="button">Закрыть</button>
-      </div>
-    </section>
+        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>    
+      </section>
+    </div>
   </body>
 </html>

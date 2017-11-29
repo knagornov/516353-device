@@ -63,9 +63,9 @@
       <div class="catalog-title-container">
         <h1>Моноподы для селфи</h1>
         <ul class="breadcrumbs">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Каталог товаров</a></li>
-          <li class="breadcrumbs-current">Моноподы для селфи</li>
+          <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs-item"><a href="#">Каталог товаров</a></li>
+          <li class="current-breadcrumbs-item">Моноподы для селфи</li>
         </ul>
       </div>
 
@@ -80,8 +80,8 @@
               <li><a href="#">По популярности</a></li>
             </ul>
             <ul class="sorting-order">
-              <li><a href="#"><span class="increasing-order">По возрастанию</span></a></li>
-              <li><a href="#"><span class="decreasing-order">По убыванию</span></a></li>
+              <li><a class="increasing-order" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+              <li><a class="decreasing-order currrent-sorting-order" href="#"><span class="visually-hidden">По убыванию</span></a></li>
             </ul>
           </section>
         </div>
@@ -94,11 +94,16 @@
               <fieldset class="price-filter">
                 <legend>Стоимость</legend>
                 <div class="price-range">
-                  <div class="range-bar"></div>
-                  <div class="slider-min"></div>
-                  <div class="slider-max"></div>
-                  <label>от <input class="min-value" type="text" value="0"></label>
-                  <label>до <input class="max-value" type="text" value="5000"></label>
+                  <div class="range-bar">
+                    <div class="slider-min">
+                      <button type="button"></button>
+                      <label>от <input class="min-value" type="text" value="0" disabled></label>
+                    </div>
+                    <div class="slider-max">
+                      <button type="button"></button>
+                      <label>до <input class="max-value" type="text" value="5000" disabled></label>
+                    </div> 
+                  </div> 
                 </div>
               </fieldset>
               <fieldset class="color-filter">
@@ -154,7 +159,7 @@
                 <div class="catalog-item-image">
                 <img src="img/catalog-item-1.jpg" width="360" height="380" alt="Любительский монопод для селфи">
                 </div>                
-                <div class="catalog-item-actions" tabindex="0">
+                <div class="catalog-item-actions">
                   <button class="button add-to-cart" type="button">В корзину</button>
                   <button class="add-to-comparison" type="button">Добавить к сравнению</button>
                 </div>
@@ -162,13 +167,13 @@
 
               <li class="catalog-item">
                 <div class="catalog-item-label">
-                  <h3><a href="#">Профессиональная селфи-палка</a></h3>
+                  <h3><a href="#">Профессиональная<br> селфи-палка</a></h3>
                   <p class="catalog-item-price">1 500 руб.</p>
                 </div>
                 <div class="catalog-item-image">
                   <img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональный монопод для селфи">
                 </div>                
-                <div class="catalog-item-actions" tabindex="0">
+                <div class="catalog-item-actions">
                   <button class="button add-to-cart" type="button">В корзину</button>
                   <button class="add-to-comparison" type="button">Добавить к сравнению</button>
                 </div>
@@ -182,7 +187,7 @@
                 <div class="catalog-item-image">
                   <img src="img/catalog-item-3.jpg" width="360" height="380" alt="Монопод для селфи с водозащитой">
                 </div>                
-                <div class="catalog-item-actions" tabindex="0">
+                <div class="catalog-item-actions">
                   <button class="button add-to-cart" type="button">В корзину</button>
                   <button class="add-to-comparison" type="button">Добавить к сравнению</button>
                 </div>
@@ -193,11 +198,11 @@
                   <h3><a href="#">Селфи-палка «Следуй за мной»</a></h3>
                   <p class="catalog-item-price">4 900 руб.</p>
                 </div>
-                <p class="novelty-mark visually-hidden">Новинка!</p>
+                <p class="novelty-mark">New</p>
                 <div class="catalog-item-image">
                   <img src="img/catalog-item-4.jpg" width="360" height="380" alt="Монопод для селфи в форме руки">
                 </div>
-                <div class="catalog-item-actions" tabindex="0">
+                <div class="catalog-item-actions">
                   <button class="button add-to-cart" type="button">В корзину</button>
                   <button class="add-to-comparison" type="button">Добавить к сравнению</button>
                 </div>
@@ -243,11 +248,17 @@
         </div>
         <div class="footer-bottom-block">
           <ul class="footer-social">
-            <li><a class="social-button" href="#">Facebook</a></li>
-            <li><a class="social-button" href="#">Instagram</a></li>
-            <li><a class="social-button" href="#">Twitter</a></li>
+            <li>
+              <a class="social-button" href="#"><img src="img/social-facebook.svg" width="32" height="32" alt="Facebook"></a>
+            </li>
+            <li>
+              <a class="social-button" href="#"><img src="img/social-instagram.svg" width="32" height="32" alt="Instagram"></a>
+            </li>
+            <li>
+              <a class="social-button" href="#"><img src="img/social-twitter.svg" width="32" height="32" alt="Twitter"></a>
+            </li>
           </ul>
-          <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="35" alt="HTML Academy"></a>
         </div>
       </div>
     </footer>
