@@ -5,7 +5,7 @@
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-minified.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -64,7 +64,7 @@
         <div class="container">
           <h2 class="visually-hidden">Лучшие предложения</h2>
           <div class="promo-slider-controls">
-            <button class="promo-button current-promo" type="button"><span class="visually-hidden">Предложение 1</span></button>
+            <button class="promo-button" type="button"><span class="visually-hidden">Предложение 1</span></button>
             <button class="promo-button" type="button"><span class="visually-hidden">Предложение 2</span></button>
             <button class="promo-button" type="button"><span class="visually-hidden">Предложение 3</span></button>
           </div>
@@ -76,7 +76,7 @@
               </div>
               <div class="promo-slide-description">
                 <p class="promo-slogan">Делай селфи,<br> как Бен Стиллер!</p>
-                <p class="promo-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь&nbsp;(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <p class="promo-text">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <table>                  
                   <tr>
                     <td>8,5 м</td>
@@ -143,7 +143,7 @@
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="categories-list">
             <li class="categories-list-item"><a id="catalog-category" href="#">Виртуальная реальность</a></li>
-            <li class="categories-list-item"><a href="catalog.html">Моноподы для&nbsp;селфи</a></li>
+            <li class="categories-list-item"><a href="catalog.html">Моноподы<br> для селфи</a></li>
             <li class="categories-list-item"><a href="#">Экшн-камеры</a></li>
             <li class="categories-list-item"><a href="#">Фитнес-браслеты</a></li>
             <li class="categories-list-item"><a href="#">Умные часы</a></li>
@@ -156,9 +156,9 @@
         <div class="container">
           <h2 class="visually-hidden">Услуги</h2>
           <div class="services-slider-controls">
-            <button class="button current-service" type="button">Доставка</button>
-            <button class="button" type="button">Гарантия</button>
-            <button class="button" type="button">Кредит</button>
+            <button class="button services-button current-service" type="button">Доставка</button>
+            <button class="button services-button" type="button">Гарантия</button>
+            <button class="button services-button" type="button">Кредит</button>
           </div>
           <ul class="services-slides">
             <li class="services-slides-item delivery-service-slide">
@@ -167,11 +167,11 @@
             </li>
             <li class="services-slides-item warranty-service-slide">
               <h3>Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар,&nbsp;не&nbsp;дом, конечно же.</p>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
               </li>
             <li class="services-slides-item credit-service-slide">
               <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия&nbsp;кредита. Выгодные для нашего банка, разумеется.</p>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
           </ul>
         </div>
@@ -181,17 +181,17 @@
         <div class="container">
           <h2 class="visually-hidden">Бренды</h2>
           <ul class="list-of-companies">
-            <li class="company">
-              <a href="https://www.dji.com"><span class="visually-hidden">DJI</span></a>
+            <li>
+              <a class="company-link" href="https://www.dji.com"><img src="img/logo-dji.png" width="260" height="100" alt="DJI"></a>
             </li>
-            <li class="company">
-              <a href="http://www.sp-gadgets.com"><span class="visually-hidden">SP Gadgets</span></a>
+            <li>
+              <a class="company-link" href="http://www.sp-gadgets.com"><img src="img/logo-spgadgets.png" width="260" height="100" alt="SP Gadgets"></a>
             </li>
-            <li class="company">
-              <a href="https://gopro.com"><span class="visually-hidden">GoPro</span></a>
+            <li>
+              <a class="company-link" href="https://gopro.com"><img src="img/logo-gopro.png" width="260" height="100" alt="GoPro"></a>
             </li>
-            <li class="company">
-              <a href="https://www.vive.com/ru"><span class="visually-hidden">HTC VIVE</span></a>
+            <li>
+              <a class="company-link" href="https://www.vive.com/ru"><img src="img/logo-vive.png" width="260" height="100" alt="HTC VIVE"></a>
             </li>
           </ul>
         </div>
@@ -200,8 +200,8 @@
       <div class="container about-us-container">
         <section class="about-us">         
           <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который&nbsp;есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!&nbsp;DEVICE работает со многими транспортными компаниями:</p>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
           <ul class="transport-companies">
             <li>Деловые Линии</li>  
             <li>Автотрейдинг</li>
@@ -214,9 +214,9 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <div class="map">
-            <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш офис по адресу улица Строителей 15, Москва"></a>
+            <a class="map-link" href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш офис по адресу улица Строителей 15, Москва"></a>
           </div>
-          <a class="button" href="#">Напишите нам</a>          
+          <a class="button feedback-button" href="writeus.html">Напишите нам</a>          
         </section>
       </div>
     </main>
@@ -263,34 +263,39 @@
       </div>
     </footer>
 
-    <section class="modal modal-map">
+    <section class="modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473154!2d37.527429315400866!3d55.6870340045307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1512225351293" width="960" height="559" allowfullscreen></iframe>
       <div class="big-map">
         <img src="img/map-big.jpg" width="960" height="559" alt="Наш офис по адресу улица Строителей 15, Москва">
       </div>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть карту</span></button>
     </section>
-
-    <div class="modal-feedback-wrapper">
-      <section class="modal modal-feedback">     
-        <h2 class="visually-hidden">Напишите нам</h2>
-        <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
-          <p class="feedback-item">
-            <label for="feedback-name">Ваше имя:</label>
-            <input id="feedback-name" name="name" type="text" placeholder="Представьтесь, пожалуйста">
-          </p>
-          <p class="feedback-item">
-            <label for="feedback-email">Ваш e-mail:</label>
-            <input id="feedback-email" name="email" type="email" placeholder="Для отправки ответа">
-          </p>
-          <p class="feedback-item">
-            <label for="feedback-message">Текст письма:</label>
-            <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
-          </p>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>    
-      </section>
-    </div>
+    
+      <section class="modal-feedback">
+        <div class="modal-feedback-container">     
+          <h2 class="visually-hidden">Напишите нам</h2>
+          <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+            <p class="feedback-item">
+              <label for="feedback-name">Ваше имя:</label>
+              <input id="feedback-name" name="name" type="text" placeholder="Представьтесь, пожалуйста">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-email">Ваш e-mail:</label>
+              <input id="feedback-email" name="email" type="email" placeholder="Для отправки ответа">
+            </p>
+            <p class="feedback-item">
+              <label for="feedback-message">Текст письма:</label>
+              <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+          <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>   
+        </div>      
+    </section>
+    
+    <script src="js/promo-minified.js"></script>
+    <script src="js/services-minified.js"></script>
+    <script src="js/modal-minified.js"></script>
   </body>
 </html>

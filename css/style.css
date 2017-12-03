@@ -16,6 +16,26 @@
   url("../fonts/gilroylight-webfont.woff") format("woff");
 }
 
+@-webkit-keyframes shake {
+  0%, 100%                { -webkit-transform: translateX(0); transform: translateX(0);         }
+  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+  20%, 40%, 60%, 80%      { -webkit-transform: translateX(10px); transform: translateX(10px);   }
+}
+@keyframes shake {
+  0%, 100%                { -webkit-transform: translateX(0); transform: translateX(0);         }
+  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); transform: translateX(-10px); }
+  20%, 40%, 60%, 80%      { -webkit-transform: translateX(10px); transform: translateX(10px);   }
+}
+
+@-webkit-keyframes popup {
+  from { -webkit-transform: translateY(2000px); transform: translateY(2000px); }
+  to   { -webkit-transform: translateY(0); transform: translateY(0);           }
+}
+@keyframes popup {
+  from { -webkit-transform: translateY(2000px); transform: translateY(2000px); }
+  to   { -webkit-transform: translateY(0); transform: translateY(0);           }
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -523,20 +543,10 @@ input[type="search"]:focus + .search-button {
   padding: 0;
 
   list-style: none;
-
-  counter-reset: slideCounter;
 }
 
 .promo-slides-item {
-  position: relative;
-
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: none;
 }
 
 .promo-slides-item::after {
@@ -549,10 +559,17 @@ input[type="search"]:focus + .search-button {
   font-weight: 800;
   line-height: 179.2px;
 
-  content: "0" counter(slideCounter);
-  counter-increment: slideCounter;
+  content: "01";
 
   color: #fff;
+}
+
+.promo-slides-item:nth-child(2)::after {
+  content: "02";
+}
+
+.promo-slides-item:nth-child(3)::after {
+  content: "03";
 }
 
 .promo-slide-image {
@@ -666,16 +683,16 @@ input[type="search"]:focus + .search-button {
   background-color: #fff;
 }
 
-/*.promo-slides-item:nth-child(1) {
-  display: none;
-}*/
+.promo-show {
+  position: relative;
 
-.promo-slides-item:nth-child(2) {
-  display: none;
-}
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 
-.promo-slides-item:nth-child(3) {
-  display: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .categories .container {
@@ -836,6 +853,7 @@ input[type="search"]:focus + .search-button {
 
 .services-slides-item {
   position: relative;
+  display: none;
 }
 
 .services-slides-item h3 {
@@ -848,12 +866,6 @@ input[type="search"]:focus + .search-button {
   font-weight: 800;
 
   color: #000;
-}
-
-/*.services-slides-item:nth-child(1),*/
-.services-slides-item:nth-child(2),
-.services-slides-item:nth-child(3) {
-  display: none;
 }
 
 .services-slides-item p {
@@ -902,6 +914,10 @@ input[type="search"]:focus + .search-button {
   background: url("../img/services-credit.svg") no-repeat;
 }
 
+.service-show {
+  display: block;
+}
+
 .companies .container {
   margin-bottom: 93px;
   padding-right: 0;
@@ -925,32 +941,17 @@ input[type="search"]:focus + .search-button {
   justify-content: space-between;
 }
 
-.company a {
+.company-link {
   display: block;
 
   width: 260px;
   height: 100px;
+  overflow: hidden;
 }
 
-.company:nth-child(1) a {
-  background: url(../img/logo-dji.png);
-}
-
-.company:nth-child(2) a {
-  background: url(../img/logo-spgadgets.png);
-}
-
-.company:nth-child(3) a {
-  background: url(../img/logo-gopro.png);
-}
-
-.company:nth-child(4) a {
-  background: url(../img/logo-vive.png);
-}
-
-.company a:hover,
-.company a:focus {
-  background-position: bottom;
+.company-link:hover img,
+.company-link:focus img {
+  transform: translateY(-100px);
 }
 
 .about-us-container {
@@ -1334,25 +1335,35 @@ input[type="search"]:focus + .search-button {
   top: calc(50% - 280px);
   left: calc(50% - 480px);
 
+  display: none;
+
   width: 960px;
   height: 559px;
 
+  background-color: #e5e3df;
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.modal-map {
-  display: none;
-}
+.google-map {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-.modal-feedback-wrapper {
-  position: fixed;
-  z-index: 3;
-  top: calc(50% - 275px);
-  left: calc(50% - 480px);
+  border: none;
 }
 
 .modal-feedback {
+  position: fixed;
+  z-index: 2;
+  
+  top: calc(50% - 275px);
+  left: calc(50% - 480px);
+
+  display: none;
+}
+
+.modal-feedback-container {
   position: relative;
 
   display: -webkit-box;
@@ -1373,7 +1384,7 @@ input[type="search"]:focus + .search-button {
           box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.modal-feedback::before {
+.modal-feedback-container::before {
   position: absolute;
   z-index: -1;
   top: 43px;
@@ -1388,7 +1399,7 @@ input[type="search"]:focus + .search-button {
           box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
-.modal-feedback .feedback {
+.modal-feedback-container .feedback {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1525,8 +1536,23 @@ input[type="search"]:focus + .search-button {
   opacity: 0.3;
 }
 
-.modal-feedback-wrapper {
-  display: none;
+.modal-show,
+.overlay-show {
+  display: block;
+}
+
+.modal-show {
+  -webkit-animation-name: popup;
+          animation-name: popup;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+.modal-error {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 /*------------------------------catalog.html------------------------------*/
@@ -1747,6 +1773,7 @@ input[type="search"]:focus + .search-button {
   margin-left: 19px;
 
   opacity: 0.2;
+  outline: none;
   background: url("../img/sorting-arrow.svg") no-repeat;
 }
 
@@ -1767,6 +1794,7 @@ input[type="search"]:focus + .search-button {
 .decreasing-order:hover,
 .decreasing-order:focus {
   opacity: 0.4;
+  outline: none;
 }
 
 .catalog-top-container > h2,
@@ -2045,6 +2073,10 @@ input[type="search"]:focus + .search-button {
   margin: 0;
 
   font-size: 16px;
+}
+
+.catalog-item-image {
+  background-color: #efefef;
 }
 
 .catalog-item-actions {
