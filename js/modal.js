@@ -44,18 +44,20 @@ feedbackButton.addEventListener("click", function (evt) {
 });
 
 feedbackForm.addEventListener("submit", function (evt) {
-  evt.preventDefault();
   if (!nameField.value) {
+    evt.preventDefault();
     modalFeedback.classList.remove("modal-error");
     modalFeedback.offsetWidth = modalFeedback.offsetWidth;
     modalFeedback.classList.add("modal-error");
     nameField.focus();
   } else if (!emailField.value) {
+    evt.preventDefault();
     modalFeedback.classList.remove("modal-error");
     modalFeedback.offsetWidth = modalFeedback.offsetWidth;
     modalFeedback.classList.add("modal-error");
     emailField.focus();
   } else if (!messageField.value) {
+    evt.preventDefault();
     modalFeedback.classList.remove("modal-error");
     modalFeedback.offsetWidth = modalFeedback.offsetWidth;
     modalFeedback.classList.add("modal-error");
