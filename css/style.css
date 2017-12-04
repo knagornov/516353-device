@@ -1818,6 +1818,10 @@ input[type="search"]:focus + .search-button {
   list-style: none;
 }
 
+.filter-form {
+  border-top: 2px solid #000;;
+}
+
 .filter-form fieldset,
 .catalog-item h3 {
   margin: 0;
@@ -1827,27 +1831,16 @@ input[type="search"]:focus + .search-button {
 }
 
 .filter-form fieldset {
-  position: relative;
+  border-bottom: 2px solid #000;
 }
 
-.filter-form fieldset::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: block;
-
-  width: 100%;
-  height: 2px;
-
-  content: "";
-
-  background-color: #000;
+.filter-form fieldset:last-of-type {
+  border-bottom: none;
 }
 
 .filter-form legend {
   margin-bottom: 37px;
-  padding-top: 14px;
+  padding-top: 12px;
 
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
@@ -1855,7 +1848,7 @@ input[type="search"]:focus + .search-button {
 }
 
 .filter-form .price-filter {
-  margin-bottom: 67px;
+  padding-bottom: 67px;
 }
 
 .price-range label,
@@ -1938,7 +1931,7 @@ input[type="search"]:focus + .search-button {
 
 .filter-form .color-filter,
 .filter-form .bluetooth-filter {
-  margin-bottom: 31px;
+  padding-bottom: 31px;
 }
 
 .color-filter legend,
