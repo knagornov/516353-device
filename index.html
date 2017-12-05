@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize-minified.css" rel="stylesheet">
     <link href="css/style-minified.css" rel="stylesheet">
   </head>
   <body>
@@ -21,13 +21,13 @@
             <input id="search-field" name="search-field" type="search" placeholder="Поиск по сайту">
             <button class="search-button" type="submit">Найти</button>
           </form>
-          <nav class="user-navigation header-user-navigation">
+          <div class="user-navigation header-user-navigation">
             <ul>
               <li class="user-navigation-item sign-in"><a class="sign-in-link" href="#">Войти</a></li>
               <li class="user-navigation-item comparison"><a class="comparison-link" href="#">Сравнить</a></li>
               <li class="user-navigation-item cart"><a class="cart-link" href="#">Корзина</a></li>
             </ul>
-          </nav>
+          </div>
         </div>
         <div class="header-bottom-block">
           <nav class="site-navigation header-site-navigation"> 
@@ -76,7 +76,7 @@
               </div>
               <div class="promo-slide-description">
                 <p class="promo-slogan">Делай селфи,<br> как Бен Стиллер!</p>
-                <p class="promo-text">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <p class="promo-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <table>                  
                   <tr>
                     <td>8,5 м</td>
@@ -100,7 +100,7 @@
               </div>
               <div class="promo-slide-description">
                 <p class="promo-slogan">Худеем<br> правильно!</p>
-                <p class="promo-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать  занятия и соблюдать диету.</p>
+                <p class="promo-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не&nbsp;пропускать занятия и соблюдать диету.</p>
                 <table>
                   <tr>
                     <td>48 часов</td>
@@ -119,8 +119,8 @@
                 <img src="img/slide-3.png" width="526" height="334" alt="Квадрокоптер с лазером">
               </div>
               <div class="promo-slide-description">
-                <p class="promo-slogan">Порхает как бабочка,<br> жалит как пчела!</p>
-                <p class="promo-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                <p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
+                <p class="promo-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным&nbsp;лазером, замаскированным под стандартную камеру.</p>
                 <table>
                   <tr>
                     <td>800 м</td>
@@ -143,7 +143,7 @@
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul class="categories-list">
             <li class="categories-list-item"><a id="catalog-category" href="#">Виртуальная реальность</a></li>
-            <li class="categories-list-item"><a href="catalog.html">Моноподы<br> для селфи</a></li>
+            <li class="categories-list-item"><a href="catalog.html">Моноподы для&nbsp;селфи</a></li>
             <li class="categories-list-item"><a href="#">Экшн-камеры</a></li>
             <li class="categories-list-item"><a href="#">Фитнес-браслеты</a></li>
             <li class="categories-list-item"><a href="#">Умные часы</a></li>
@@ -171,7 +171,7 @@
               </li>
             <li class="services-slides-item credit-service-slide">
               <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
           </ul>
         </div>
@@ -200,8 +200,8 @@
       <div class="container about-us-container">
         <section class="about-us">         
           <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
           <ul class="transport-companies">
             <li>Деловые Линии</li>  
             <li>Автотрейдинг</li>
@@ -227,16 +227,18 @@
           <div class="logo-footer">
             <img src="img/device-logo-footer.png" width="163" height="36" alt="Логотип DEVICE">
           </div>
-          <nav class="user-navigation footer-user-navigation">
+          <div class="user-navigation footer-user-navigation">
             <ul>
               <li class="user-navigation-item sign-in"><a class="sign-in-link" href="#">Войти</a></li>
               <li class="user-navigation-item comparison"><a class="comparison-link" href="#">Сравнить</a></li>
               <li class="user-navigation-item cart"><a class="cart-link" href="#">Корзина</a></li>
-            </ul>          
-          </nav>
+            </ul>
+          </div>
         </div>
         <div class="footer-middle-block">
-          <p class="address">г. Москва, ул. Строителей, 15</p>
+          <div class="address">
+            <p>г. Москва, ул. Строителей, 15</p>
+          </div>
           <nav class="site-navigation footer-site-navigation">
             <ul>
               <li class="site-navigation-item"><a href="#">Доставка</a></li>
@@ -244,7 +246,9 @@
             <li class="site-navigation-item"><a href="#">Контакты</a></li>
             </ul>
           </nav>
-          <p class="phone">Тел.: +7 (495) 495-95-95</p>
+          <div class="phone">
+            <p>Тел.: +7 (495) 495-95-95</p>
+          </div>
         </div>
         <div class="footer-bottom-block">
           <ul class="footer-social">
